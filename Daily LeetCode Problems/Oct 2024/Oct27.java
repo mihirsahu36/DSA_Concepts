@@ -35,24 +35,24 @@ Constraints:
 
 class Solution {
     public int countSquares(int[][] matrix) {
-        int n = matrix.length;
-        int m = matrix[0].length;
+        int n = matrix.length; // no. of rows
+        int m = matrix[0].length; // no. of columns
         int[][] dp = new int[n][m];
-        int ans = 0;
+        int ans = 0; // for storing result
         for (int i = 0; i < n; i++) {
-            dp[i][0] = matrix[i][0];
+            dp[i][0] = matrix[i][0]; // setting first row of dp as matrix first row
             ans += dp[i][0];
         }
         for (int j = 1; j < m; j++) {
-            dp[0][j] = matrix[0][j];
+            dp[0][j] = matrix[0][j]; // setting first column of dp as matrix first column
             ans += dp[0][j];
         }
         for(int i = 1; i < n; i++) {
             for(int j = 1; j < m; j++) {
                 if(matrix[i][j] == 1) {
-                    dp[i][j] = 1 + Math.min(Math.min(dp[i][j-1], dp[i-1][j]), dp[i-1][j-1]);
+                    dp[i][j] = 1 + Math.min(Math.min(dp[i][j-1], dp[i-1][j]), dp[i-1][j-1]); // adding its own value (1) and miniumum of value(its top, left top, and left value)
                 }
-                ans += dp[i][j];
+                ans += dp[i][j]; // returing total value
             }
         }
         
