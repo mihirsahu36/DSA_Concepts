@@ -18,12 +18,12 @@ n == mat[i].length
 
 class Solution {
     public int[] findDiagonalOrder(int[][] mat) {
-        int n = mat.length;
-        int m = mat[0].length;
+        int m = mat.length;
+        int n = mat[0].length;
         Map<Integer, List<Integer>> map = new HashMap<>();
 
-        for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
                 int key = i + j;
                 map.putIfAbsent(key, new ArrayList<>());
                 map.get(key).add(mat[i][j]);
