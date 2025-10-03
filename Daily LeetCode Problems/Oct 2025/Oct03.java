@@ -18,7 +18,6 @@ n == heightMap[i].length
 1 <= m, n <= 200
 0 <= heightMap[i][j] <= 2 * 10^4 */
 
-
 class Solution {
     public int trapRainWater(int[][] heightMap) {
         int m = heightMap.length;
@@ -49,7 +48,7 @@ class Solution {
             int i = cell[1];
             int j = cell[2];
 
-            for (int []dir : directions) {
+            for(int []dir : directions){
                 int i_ = i + dir[0];
                 int j_ = j + dir[1];
 
