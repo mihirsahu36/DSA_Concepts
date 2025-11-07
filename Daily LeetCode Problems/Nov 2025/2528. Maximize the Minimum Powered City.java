@@ -6,7 +6,7 @@ The power of a city is the total number of power stations it is being provided p
 The government has sanctioned building k more power stations, each of which can be built in any city, and have the same range as the pre-existing ones.
 Given the two integers r and k, return the maximum possible minimum power of a city, if the additional power stations are built optimally.
 Note that you can build the k power stations in multiple cities.
-
+ 
 Example 1:
 Input: stations = [1,2,4,5,0], r = 1, k = 2
 Output: 5
