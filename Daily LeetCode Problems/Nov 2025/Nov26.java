@@ -34,11 +34,11 @@ class Solution {
         int m = grid.length, n = grid[0].length;
         int MOD = 1_000_000_007;
 
-        int [][] dp = new int[n][k];
-        int [][] prev = new int[n][k];
+        int [][]dp = new int[n][k];
+        int [][]prev = new int[n][k];
 
         for(int i=0;i<m;i++){
-            int [][] temp = prev;
+            int [][]temp = prev;
             prev = dp;
             dp = temp;
 
